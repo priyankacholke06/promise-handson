@@ -43,25 +43,27 @@
         6
         7"</p>
         <pre>
-            Ans.   function call(count){
-      
-                console.log(count)
-                
-              }
-              setTimeout
-              {call(1),1000};
-              setTimeout
-              {call(2),2000};
-              setTimeout
-              {call(3),3000};
-              setTimeout
-              {call(4),4000};
-              setTimeout
-              {call(5),5000};
-              setTimeout
-              {call(6),6000};
-              setTimeout
-              {call(7),7000};
+            Ans.  setTimeout(()=>{
+              console.log("1")
+              setTimeout(()=>{
+                  console.log("2")
+                  setTimeout(()=>{
+                      console.log("3")
+                      setTimeout(()=>{
+                          console.log("4")
+                          setTimeout(()=>{
+                              console.log("5")
+                              setTimeout(()=>{
+                                  console.log("6")
+                                  setTimeout(()=>{
+                                      console.log("7")
+                                  },7000)
+                              },6000)
+                          },5000)
+                      },4000)
+                  },3000)
+              },2000)
+          },1000)
             
               The phenomenon which happens when we nest multiple callbacks within a function is called a callback hell. The shape of the resulting code structure resembles a pyramid and hence callback hell is also called the “pyramid of the doom”. It makes the code very difficult to understand and maintain.
             
